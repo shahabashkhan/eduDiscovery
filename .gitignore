@@ -1,0 +1,98 @@
+# -----------------------------
+# Node & Environment
+# -----------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+
+# Environment files (VERY IMPORTANT)
+.env
+.env.local
+.env.development
+.env.production
+
+# -----------------------------
+# Logs
+# -----------------------------
+logs/
+*.log
+*.tmp
+*.out
+*.err
+
+# PM2 logs
+.pids
+*.pid
+*.seed
+*.pid.lock
+
+# -----------------------------
+# OS / Editor files
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# Linux/Mac/Windows system files
+*.swp
+*.swo
+
+# -----------------------------
+# Sequelize / DB
+# -----------------------------
+/sequelize-data
+/config/config.json
+
+# SQLite (if ever used)
+*.sqlite
+*.sqlite3
+
+# Postgres dump
+*.sql
+
+# -----------------------------
+# AWS & Deployment
+# -----------------------------
+.aws/
+*.pem
+*.key
+*.crt
+
+# Serverless / CDK / CloudFormation
+.serverless/
+.cdk.staging/
+.aws-sam/
+
+# Docker
+docker-data/
+docker-compose.override.yml
+docker-compose.local.yml
+
+# -----------------------------
+# Temporary folders
+# -----------------------------
+tmp/
+temp/
+cache/
+coverage/
+
+# jest
+coverage/
+*.lcov
+
+# -----------------------------
+# Optional: Ignore scripts output
+# -----------------------------
+scripts/output/
+scripts/temp/
