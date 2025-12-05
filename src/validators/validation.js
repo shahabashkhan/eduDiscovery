@@ -51,6 +51,14 @@ exports.listSchools = {
 
     page: Joi.number().min(1).default(1),
     limit: Joi.number().min(5).max(50).default(10),
+
+    name: Joi.string().optional(),
+    city: Joi.string().optional(),
+
+    sortBy: Joi.string()
+      .valid("distance_km", "google_rating", "yearly_fee_min", "yearly_fee_max", "name")
+      .default("distance_km"),
+    sortOrder: Joi.string().valid("ASC", "DESC").default("ASC"),
   }),
 };
 

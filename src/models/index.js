@@ -6,13 +6,20 @@ const path = require("path");
 const { Sequelize, DataTypes } = require("sequelize");
 const logger = require("../utils/logger");
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 const basename = path.basename(__filename);
 const db = {};
 
 // ⭐ Initialize Sequelize using DATABASE_URL
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: "postgres",
-  logging: (msg) => logger.info(msg),
+  logging: msg => logger.info(msg),
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  },
 });
 
 // ⭐ Test connection
